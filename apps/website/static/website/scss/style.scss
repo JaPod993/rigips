@@ -1,0 +1,669 @@
+@import 'dn';
+
+// kolory
+$white: #ffffff; //biały
+$green: #85c42d; //zielony
+$grey-text: #646567; //szary
+$grey-bg: #f0f5f8; //szaro-niebieskie tło
+$blue: #3387d3; //blue
+$blue-darker: #0069c8; //darken blue
+
+
+
+// justify class
+.text-justify {
+  text-align: justify;
+}
+
+.center-justified {
+  text-align: justify;
+  -moz-text-align-last: left;
+  text-align-last: left;
+}
+
+.inactiveLink {
+  pointer-events: none;
+  cursor: default;
+}
+
+//.................FONTY......................
+
+
+@mixin ubuntu-light {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+@mixin ubuntu-regular {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+@mixin ubuntu-medium {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+@mixin ubuntu-bold {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+}
+
+
+
+//.............................................
+
+body {
+  //background-color: $grey;
+  // padding-top: 70px;
+}
+
+//............................HEADER..............................
+
+.header-wrapper {
+  position: relative;
+  .skos_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .skos_2 {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    width: 100%;
+    max-height: 370px;
+  }
+}
+.baner {
+  position: relative;
+
+  //padding-bottom: 370px;
+  .trophy-wrapper {
+    padding-top: 135px;
+    padding-bottom: 640px;
+  }
+background: url(../images/header.jpg) center center no-repeat fixed;
+  background-size: cover;
+  @include ubuntu-bold;
+  font-size: 150px;
+  color: $white;
+  text-transform: uppercase;
+  .mini-title {
+    @include ubuntu-light;
+    font-size: 29px;
+    text-transform: none;
+  }
+  .trophy {
+    line-height: 115px;
+  }
+  .trophy-line {
+    padding-bottom: 40px;
+  }
+}
+.saint-gobain {
+  position: absolute;
+  top: 50px;
+  padding-right: 50px;
+  z-index: 1;
+}
+
+h2 {
+  @include ubuntu-medium;
+  font-size: 28px;
+  color: $blue;
+}
+
+p {
+  @include ubuntu-regular;
+  font-size: 16px;
+  color: $grey-text;
+}
+
+.welcome {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.blue-wrapper {
+  background-color: rgba(0,105,200,0.75);
+  a{
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 400;
+  }
+}
+
+
+
+.form-title {
+  color: white;
+  margin-top: 30px;
+
+}
+.green-border {
+   border-bottom: 1px solid $green;
+  margin-bottom: 15px;
+}
+
+.form-group-left {
+ padding-left: 0;
+  padding-right: 15px;
+}
+
+.form-group-right {
+  padding-left: 15px;
+  padding-right: 0;
+}
+
+label {
+  @include ubuntu-regular;
+  font-size: 16px;
+  color: white;
+}
+
+.form-control {
+  border-radius: 0px;
+  //height: 35px!important;
+}
+
+textarea.auto-expand{
+  display: block;
+  overflow: hidden;
+  resize: none;
+  height: 35px;
+  min-height: 35px !important;
+}
+
+.checkbox-font {
+  margin-bottom: 30px;
+}
+.checkbox-font,
+.small.text-muted {
+  @include ubuntu-light;
+  font-size: 14px;
+  color: $white;
+}
+.form-group {
+  margin-bottom: 10px;
+}
+.checkbox-text {
+  padding-bottom: 15px;
+}
+.button-wyslij {
+  border-radius: 0px;
+  border: none;
+  background-color: $white;
+  color: $blue;
+  @include ubuntu-regular;
+  font-size: 14px;
+  height: 35px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.drop-area {
+  margin-top: 0;
+  border-radius: 0;
+  background-color: $white;
+  height: 70px;
+  .drop-text {
+    h3 {
+      @include ubuntu-light;
+      font-size: 14px;
+      color: $grey-text;
+      margin-top: 10px;
+    }
+  }
+}
+.inline {
+  display: inline-block;
+}
+h3.inline.icon {
+  margin-left: 15px;
+}
+.rectangle {
+  p {
+    margin-bottom: 0;
+    color: $white;
+  }
+  background: $blue;
+  text-align: right;
+}
+.number-triangle {
+  background: $white;
+}
+.number {
+  @include ubuntu-bold;
+  font-size: 30px;
+  color: $blue;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.skos_3 {
+    position: relative;
+  }
+
+ //.skos_5 {
+ //   position: absolute;
+ //   bottom: 0px;
+ //   right: 0;
+ //   width: 100%;
+ //  // max-height: 370px;
+ // }
+.opis-wrapper {
+  position: relative;
+  top: -85px;
+
+}
+.triangle-right {
+    padding-bottom: 35px;
+    padding-top: 31px;
+}
+.triangle-left {
+    padding-bottom: 23px;
+    padding-top: 21px;
+}
+.right-3 {
+    padding-top: 45px;
+    padding-bottom: 43px;
+}
+
+.triangle-right:before{
+  content:" ";
+  position:absolute;
+  border:55px solid transparent;
+  left:0px;
+  bottom:0px;
+  border-left:55px solid #fff;
+  border-bottom:55px solid #fff;
+}
+.triangle-left:before{
+  content:" ";
+  position:absolute;
+  border:55px solid transparent;
+  right:0px;
+  bottom:0px;
+  border-right:55px solid #fff;
+  border-bottom:55px solid #fff;
+}
+.triangle-01:after{
+  content:"01";
+  @include ubuntu-bold;
+  font-size: 30px;
+  color: $blue;
+  position:absolute;
+  left:10px;
+  bottom:5px;
+}
+.triangle-02:after{
+  content:"02";
+  @include ubuntu-bold;
+  font-size: 30px;
+  color: $blue;
+  position:absolute;
+  right:10px;
+  bottom:5px;
+}
+.triangle-03:after{
+  content:"03";
+  @include ubuntu-bold;
+  font-size: 30px;
+  color: $blue;
+  position:absolute;
+  left:10px;
+  bottom:5px;
+}
+.triangle-04:after{
+  content:"04";
+  @include ubuntu-bold;
+  font-size: 30px;
+  color: $blue;
+  position:absolute;
+  right:10px;
+  bottom:5px;
+}
+.triangle-05:after{
+  content:"05";
+  @include ubuntu-bold;
+  font-size: 30px;
+  color: $blue;
+  position:absolute;
+  left:10px;
+  bottom:5px;
+}
+.right-triangle-padding {
+  padding-left: 20px;
+}
+.left-triangle-padding {
+  text-align: left;
+  padding-right: 50px;
+}
+.footer-title {
+  color: $white;
+  padding-top: 5px;
+}
+.footer-text {
+  @include ubuntu-medium;
+  font-size: 18px;
+  color: $white;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+.footer-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+.alert{
+  border-radius: 0px;
+  border: none;
+  background: $white;
+  color: rgba(255, 0, 0, 0.65);
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.alert.success{
+  color: green;
+}
+.sc-icon {
+  width: 20px;
+  height: 20px;
+}
+.silver-text {
+  @include ubuntu-light;
+  font-size: 14px;
+  color: $white;
+}
+.silver-wrapper {
+  float: right;
+  padding-top: 45px;
+}
+.footer-logo {
+  padding-bottom: 15px;
+}
+.text-1 {
+  float: left;
+  padding-right: 10px;
+}
+.text-2 {
+  float: right;
+  padding-left: 10px;
+}
+.line {
+  display: inline-block;
+  height: 150px;
+  width: 2px;
+  background: $green;
+  position: absolute;
+  z-index: 2;
+  display: none !important;
+}
+.line-block {
+  height: 150px;
+  display: block;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+  .line {
+    display: inline-block;
+    height: 150px;
+    width: 2px;
+    background: $green;
+    position: relative;
+    left: 50%;
+    margin-left: -1px;
+  }
+}
+.line-1 {
+  position: relative;
+  top: -265px;
+}
+.line-2 {
+  position: relative;
+  top: -190px;
+}
+.line-3 {
+  position: relative;
+  top: -25px;
+}
+.form-wrapper-padding {
+  padding-bottom: 70px;
+}
+.warunki-margin {
+  margin-bottom: 30px;
+}
+.condition-wrapper {
+  a{
+    color:#fff;
+    text-decoration: underline;
+    font-weight: 400;
+    &:visited{
+      color:#fff;
+    }
+  }
+}
+body {
+  background: url("../images/skos_5.svg") no-repeat;
+  background-position: 0px 1090px;
+
+  //background-size: cover;
+  .skos_5 {
+    position: relative;
+    top: -50px;
+  }
+
+}
+
+//......................... media queries .........................
+@media screen and (max-width: 1700px) {
+  .blue-wrapper{
+    position: initial;
+
+  }
+}
+@media screen and (max-width: 1200px) {
+  .green-label {
+    padding-top: 40px;
+  }
+  .welcome {
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .line {
+    height: 100px;
+  }
+  .line-2 {
+    top: -50px;
+  }
+  .line-1 {
+    top: -250px;
+  }
+  .green-label {
+    padding-top: 22px;
+    .icons-top {
+      font-size: 15px;
+    }
+  }
+   .rectangle{
+    margin-bottom: 20px;
+  }
+  .triangle-04 {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+   .triangle-05 {
+    padding-bottom: 45px;
+    padding-top: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form-wrapper {
+    padding-top: 0;
+  }
+  .green-label{
+    display: none;
+  }
+  .opis-wrapper{
+    position: initial;
+    padding-bottom: 25px;
+  }
+  .saint-gobain{
+    background: #fff;
+    position: initial;
+    padding: 10px 15px;
+  }
+  .header-wrapper .skos_1{
+    display: none;
+  }
+  .rectangle{
+    margin-bottom: 20px;
+  }
+  .welcome{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .skos_3 img{
+    display: none;
+  }
+  .rectangle p{
+    font-size: 16px;
+  }
+  .line-1, .line-2, .line-3{
+    display: none;
+  }
+  .footer-wrapper{
+    margin-top: 20px;
+  }
+  .condition-wrapper{
+    padding-bottom: 15px;
+  }
+  .warunki-margin{
+    margin-top: 30px;
+  }
+  .blue-wrapper{
+    position: initial;
+
+  }
+}
+
+.rigips-logo{
+  display: inline-block;
+  padding: 20px 0px;
+  max-width: 205px;
+}
+
+.reward-wrapper {
+  margin-top: 45px;
+  background: url(../images/lizbona_tram.jpg) left center no-repeat $blue;
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color:#fff;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  .reward-title {
+    font-size: 29px;
+    color:#fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .reward-text{
+    font-weight: 500;
+    color:#fff;
+
+  }
+}
+
+.contact-wrapper{
+  margin-top: 15px;
+  color: #fff;
+  line-height: 25px;
+  a{
+    color:#fff;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .baner {
+    font-size: 100px;
+    .trophy {
+      line-height: 60px;
+    }
+    .mini-title {
+      font-size: 20px;
+      padding-bottom: 20px;
+    }
+     .trophy-wrapper {
+       padding-bottom: 500px;
+     }
+  }
+  .form-group-left {
+    padding-right: 0;
+  }
+
+  .form-group-right {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+
+   .baner {
+    font-size: 80px;
+    .trophy {
+      line-height: 40px;
+    }
+    .mini-title {
+      font-size: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .skos_5 {
+    top: 0px!important;
+  }
+  .reward-wrapper{
+    background: $blue;
+  }
+}
+@media screen and (max-width: 600px) {
+   .baner {
+    font-size: 60px;
+    .trophy {
+      line-height: 30px;
+    }
+    .mini-title {
+      font-size: 20spx;
+      padding-bottom: 20px;
+    }
+     .trophy-wrapper {
+       padding-bottom: 350px;
+     }
+  }
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+
+  body {
+    background-position: 0px -200px;
+  }
+
+ .img-responsive{
+   width:100%;
+ }
+  .line{
+    left:50%;
+  }
+}

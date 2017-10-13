@@ -1,0 +1,67 @@
+{% extends "admin/change_list.html" %}
+
+
+{% block content %}
+{{ block.super}}
+
+<style>
+    .export{
+        border: none !important;
+        font-weight: 400 !important;
+        background: #417690 !important;
+        border-radius: 4px !important;
+        color: #fff !important;
+        width: 50px !important;
+        text-align: center !important;
+        padding: 3px !important;
+    }
+</style>
+
+<script>
+    (function($){
+
+        $(function(){
+
+            $("#changelist-search > div").append('<input class="button default export" value="Export">');
+
+            $("input.export").on("click", function () {
+                if (!$("#action-toggle").is(":checked")) {
+                    $("#action-toggle").click();
+                }
+                $(".actions select[name=action]").val('export_items');
+                $("div.actions input.select-across").val(1);
+                $("span.question").hide();
+                $("span.clear").show();
+
+
+                var options = {
+                    actionContainer: "div.actions",
+                    counterContainer: "span.action-counter",
+                    allContainer: "div.actions span.all",
+                    acrossInput: "div.actions input.select-across",
+                    acrossQuestions: "div.actions span.question",
+                    acrossClears: "div.actions span.clear",
+                    allToggle: "#action-toggle",
+                    selectedClass: "selected"
+                };
+
+                $(options.acrossInput).val(1);
+                $(options.acrossClears).show();
+                $(options.acrossQuestions).hide();
+                $(options.actionContainer).toggleClass(options.selectedClass);
+                $(options.allContainer).show();
+                $(options.counterContainer).hide();
+                $(".actions button[type=submit]").click();
+                //$("span.clear a").click();
+                if ($("#action-toggle").is(":checked")) {
+                    $("#action-toggle").click();
+                }
+            });
+
+        });
+    })(django.jQuery);
+</script>
+
+
+{% endblock %}
+

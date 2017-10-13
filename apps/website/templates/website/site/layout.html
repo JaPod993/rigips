@@ -1,0 +1,33 @@
+<!DOCTYPE html>{% load static %}{% load compress %}
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Trophy 2018 - Lokalna edycja XI międzynarodowego konkursu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="SilverCube">
+    <link href="{% static 'website/images/favicon.ico' %}" rel="shortcut icon" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--GOOGLE FONT - Roboto-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=latin-ext" rel="stylesheet">
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'website/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/style/main.css' %}">
+    <link href="{% static 'website/style/font-awesome.min.css' %}" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="{% static 'website/style/style.css' %}">
+    {% endcompress %}
+    <script src="{% static 'website/scripts/jquery.min.js' %}"></script>
+</head>
+<body>
+    {% block body_content %}
+
+    {% endblock %}
+    {% compress js %}
+    <script src="{% static 'website/scripts/main.js' %}"></script>
+    {% endcompress %}
+</body>
+</html>
